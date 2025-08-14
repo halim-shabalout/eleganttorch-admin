@@ -57,28 +57,28 @@ export default function AboutUsInfoCard() {
       </div>
 
       <div className="space-y-8 whitespace-pre-line">
-        <div>
           <h5 className="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-2">
             {messages["about_us"]}
           </h5>
+        <div className="flex items-start gap-4 p-4 bg-white/20 dark:bg-black/20 rounded-xl border border-white/30 dark:border-black/30 shadow-[2px_2px_8px_rgba(0,0,0,0.1)]">
           <p className="text-base text-gray-800 dark:text-white/90 leading-relaxed">
             {aboutUsData.about_us || "-"}
           </p>
         </div>
 
-        <div>
           <h5 className="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-2">
             {messages["vision"]}
           </h5>
+        <div  className="flex items-start gap-4 p-4 bg-white/20 dark:bg-black/20 rounded-xl border border-white/30 dark:border-black/30 shadow-[2px_2px_8px_rgba(0,0,0,0.1)]">
           <p className="text-base text-gray-800 dark:text-white/90 leading-relaxed">
             {aboutUsData.vision || "-"}
           </p>
         </div>
 
-        <div>
           <h5 className="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-2">
             {messages["mission"]}
           </h5>
+        <div  className="flex items-start gap-4 p-4 bg-white/20 dark:bg-black/20 rounded-xl border border-white/30 dark:border-black/30 shadow-[2px_2px_8px_rgba(0,0,0,0.1)]">
           <p className="text-base text-gray-800 dark:text-white/90 leading-relaxed">
             {aboutUsData.mission || "-"}
           </p>

@@ -1,7 +1,6 @@
 import { Blog } from "@/types/Blog";
 import { Modal } from "@/components/ui/modal";
 import { motion, AnimatePresence } from "framer-motion";
-import { DownloadIcon } from "@/icons";
 
 interface Props {
   isOpen: boolean;
@@ -10,9 +9,6 @@ interface Props {
 }
 
 export default function ShowBlogModal({ isOpen, onClose, blog }: Props) {
-  const handleDownloadPDF = () => {
-    window.print();
-  };
 
   return (
     <AnimatePresence>
@@ -36,18 +32,6 @@ export default function ShowBlogModal({ isOpen, onClose, blog }: Props) {
                 >
                   {blog.title}
                 </motion.h2>
-                
-                <motion.button
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.3 }}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  onClick={handleDownloadPDF}
-                  className="p-2 text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-all absolute left-6"
-                >
-                  <DownloadIcon className="w-6 h-6" />
-                </motion.button>
               </div>
             </div>
             <motion.div

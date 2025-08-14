@@ -16,6 +16,7 @@ import {
   ShootingStarIcon,
   TaskIcon,
   PieChartIcon,
+  ChatIcon,
 } from "../icons/index";
 import { useLocale } from '@/context/LocaleContext';
 
@@ -65,6 +66,11 @@ const getOtherItems = (messages: any): NavItem[] => [
     path: "/profile",
   },
    {
+    icon: <ChatIcon />,
+    name: messages["nav_communication_requests"] || "Communication Requests",
+    path: "/communication-requests",
+  },
+   {
     icon: <PageIcon />,
     name: messages["nav_blog"] || "Blog",
     path: "/blog",
@@ -74,7 +80,7 @@ const getOtherItems = (messages: any): NavItem[] => [
     name: messages["nav_setting"] || "Settings",
     subItems: [
       { name: messages["nav_about_us"] || "About Us ", path: "/setting/about-us" },
-      { name: messages["nav_call_us"] || "Call Us", path: "/setting/call-us" },
+      { name: messages["nav_co_information"] || "Contact Information", path: "/setting/co-information" },
     ],
   },
 ];
